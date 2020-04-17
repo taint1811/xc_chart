@@ -4,7 +4,7 @@ const path = require('path')
 const babel = require('rollup-plugin-babel')
 const commonjs = require('rollup-plugin-commonjs')
 const resolve = require('rollup-plugin-node-resolve')
-const banner  = require('./banner.js')
+// const banner  = require('./banner.js')
 
 const BUNDLE = process.env.BUNDLE === 'true'
 const ESM = process.env.ESM === 'true'
@@ -62,7 +62,7 @@ if (BUNDLE) {
 const rollupConfig = {
   input: path.resolve(__dirname, `../js/index.${ESM ? 'esm' : 'umd'}.js`),
   output: {
-    banner,
+    // banner,
     file: path.resolve(__dirname, `../dist/js/${fileDest}.js`),
     format: ESM ? 'esm' : 'umd',
     globals

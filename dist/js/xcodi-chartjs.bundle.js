@@ -1,8 +1,3 @@
-/*!
-  * Plugins - Chart.js
-  * Copyright 2020 Tai Nguyen
-  * Licensed under MIT Premium)
-  */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :

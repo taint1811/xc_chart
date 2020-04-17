@@ -1,8 +1,3 @@
-/*!
-  * Plugins - Chart.js
-  * Copyright 2020 Tai Nguyen
-  * Licensed under MIT Premium)
-  */
 import 'chart.js';
 
 /*
