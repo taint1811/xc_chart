@@ -4,7 +4,7 @@
   (global = global || self, (global.xcodi = global.xcodi || {}, global.xcodi.ChartJS = factory(global.Chart)));
 }(this, (function (chart_js) { 'use strict';
 
-  chart_js = chart_js && chart_js.hasOwnProperty('default') ? chart_js['default'] : chart_js;
+  chart_js = chart_js && Object.prototype.hasOwnProperty.call(chart_js, 'default') ? chart_js['default'] : chart_js;
 
   /*
    *  @author: Tai Nguyen (nguyentantai1811@gmail.com)

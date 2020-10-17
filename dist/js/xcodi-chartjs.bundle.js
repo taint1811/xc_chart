@@ -5,7 +5,7 @@
 }(this, (function () { 'use strict';
 
 	/*!
-	 * Chart.js v2.9.2
+	 * Chart.js v2.9.3
 	 * https://www.chartjs.org
 	 * (c) 2019 Chart.js Contributors
 	 * Released under the MIT License
@@ -2601,10 +2601,7 @@
 			if (!p) {
 				p = 0.3;
 			}
-			if (a < 1) {
-				a = 1;
-				s = p / 4;
-			} else {
+			{
 				s = p / (2 * Math.PI) * Math.asin(1 / a);
 			}
 			return -(a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t - s) * (2 * Math.PI) / p));
@@ -2623,10 +2620,7 @@
 			if (!p) {
 				p = 0.3;
 			}
-			if (a < 1) {
-				a = 1;
-				s = p / 4;
-			} else {
+			{
 				s = p / (2 * Math.PI) * Math.asin(1 / a);
 			}
 			return a * Math.pow(2, -10 * t) * Math.sin((t - s) * (2 * Math.PI) / p) + 1;
@@ -2645,10 +2639,7 @@
 			if (!p) {
 				p = 0.45;
 			}
-			if (a < 1) {
-				a = 1;
-				s = p / 4;
-			} else {
+			{
 				s = p / (2 * Math.PI) * Math.asin(1 / a);
 			}
 			if (t < 1) {
@@ -3889,7 +3880,7 @@
 			}
 
 			if (style.fill === false || style.fill === null) {
-				style.backgroundColor = 'rgba(0,0,0,0)';
+				style.backgroundColor = style.borderColor;
 			}
 
 			return style;
@@ -11440,7 +11431,7 @@
 		*/
 		_getLabels: function() {
 			var data = this.chart.data;
-			return this.options.labels || (this.isHorizontal() ? data.xLabels : data.yLabels) || data.labels;
+			return this.options.labels || (this.isHorizontal() ? data.xLabels : data.yLabels) || data.labels || [];
 		},
 
 		// These methods are ordered by lifecyle. Utilities then follow.
